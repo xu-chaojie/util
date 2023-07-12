@@ -17,3 +17,7 @@ with open(filename, "r") as f:
             avg_lat = line.split("=")[3].split(",")[0].strip()
             print("lat= " + avg_lat + "us")
             print("")
+        elif " lat (msec):" in line:
+            avg_lat = line.split("=")[3].split(",")[0].strip()
+            print("lat= " + avg_lat + "ms")
+            print("")
